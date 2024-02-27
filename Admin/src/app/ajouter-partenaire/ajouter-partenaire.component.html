@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+   <div id="loader">
+	</div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+	<app-header></app-header>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+		<!--**********************************
+            Chat box start
+        ***********************************-->
+		
+		<!--**********************************
+            Chat box End
+        ***********************************-->
+
+
+		
+		
+        <!--**********************************
+            Header start
+        ***********************************-->
+      
+                    
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <app-menu></app-menu>
+       
+        <div class="content-body">
+            <div class="container-fluid">
+				
+                <!-- row -->
+                <div class="row">
+                    
+					
+					
+					
+					
+					
+					<div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Add Partner</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form [formGroup]="addpartenaireForm" (ngSubmit)="addNewPartenaire()">
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">First Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Nom" formControlName="nom" name="nom">
+												<div *ngIf="this.nom?.touched && this.nom?.invalid">
+													<small class="text-danger" *ngIf="this.nom?.errors?.['required']">votre nom
+														est obligatoire</small>
+												  </div>
+                                            </div>
+                                        </div>
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Last Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Prenom" formControlName="prenom" name="prenom">
+												<div *ngIf="this.prenom?.touched && this.prenom?.invalid">
+													<small class="text-danger" *ngIf="this.prenom?.errors?.['required']">votre prenom
+														est obligatoire</small>
+												  </div>
+                                            </div>
+											
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Adresse</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Adresse" formControlName="adresse" name="adresse">
+												<div *ngIf="this.adresse?.touched && this.adresse?.invalid">
+													<small class="text-danger" *ngIf="this.adresse?.errors?.['required']">votre adresse
+														est obligatoire</small>
+												  </div>
+                                            </div>
+											
+                                        </div>
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" placeholder="Email" formControlName="email" name="email">
+												<div *ngIf="this.email?.touched && this.email?.invalid">
+													<small class="text-danger" *ngIf="this.email?.errors?.['required']">votre email
+														est obligatoire</small>
+														<small class="text-danger" *ngIf="this.email?.errors?.['email']">respecter le format d'email 
+														</small>
+												  </div>
+                                            </div>
+                                        </div>
+										
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Password</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" placeholder="Mot de passe" formControlName="mdp" name="mdp">
+												<div *ngIf="this.mdp?.touched && this.mdp?.invalid">
+													<small class="text-danger" *ngIf="this.mdp?.errors?.['required']">votre mot de passe
+														est obligatoire</small>
+												  </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">TelePhone Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Num Téléphone" formControlName="numtelephone" name="numtelephone">
+												<div *ngIf="this.numtelephone?.touched && this.numtelephone?.invalid">
+													<small class="text-danger" *ngIf="this.numtelephone?.errors?.['required']">votre numéro de telephone
+														est obligatoire</small>
+												  </div>
+                                            </div>
+											
+                                        </div>
+										
+                                       
+                                        
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn btn-primary">Add</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+                    
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			
+                </div>
+            </div>
+        </div>
+     <app-footer></app-footer>
+    </div>
+</body>
+
+</html>

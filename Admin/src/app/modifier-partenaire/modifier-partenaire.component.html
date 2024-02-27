@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+   <div id="loader">
+	</div>
+   
+    <div id="main-wrapper">
+
+	<app-header></app-header>
+     
+        <div class="header">
+            <div class="header-content">
+                <nav class="navbar navbar-expand">
+                    <div class="collapse navbar-collapse justify-content-between">
+                        <div class="header-left">
+							<div class="dashboard_bar">
+                                Form-Element
+                            </div>
+							
+                        </div>
+                        <div class="navbar-nav header-right">
+							
+							
+                        </div>
+                    </div>
+				</nav>
+			</div>
+		</div>
+                    
+       
+        <app-menu></app-menu>
+       
+        <div class="content-body">
+            <div class="container-fluid">
+			
+                <div class="row">
+                    
+				
+					
+					<div class="col-xl-6 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Modifier Partenaire</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">First Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Nom"  [(ngModel)]="currentPartenaire.nom" name="nom">
+                                            </div>
+                                        </div>
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Last name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Prenom" [(ngModel)]="currentPartenaire.prenom" name="prenom">
+                                            </div>
+											
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Adresse</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Adresse" [(ngModel)]="currentPartenaire.adresse" name="adresse">
+                                            </div>
+											
+                                        </div>
+										
+                                      
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Password</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" placeholder="Email" [(ngModel)]="currentPartenaire.email" name="email">
+                                            </div>
+                                        </div>
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Mot de passe</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" placeholder="Mot de passe" [(ngModel)]="currentPartenaire.mdp" name="mdp">
+                                            </div>
+                                        </div>
+										
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Telephone Number</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Num Téléphone" [(ngModel)]="currentPartenaire.numtelephone" name="numtelephone">
+                                            </div>
+											
+                                        </div>
+                                        
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn btn-primary" (click)="onUpdatPartenaire()" >Modifier</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+                    
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			
+                </div>
+            </div>
+        </div>
+
+      <app-footer></app-footer>
+
+        
+    </div>
+   
+</body>
+
+</html>
+

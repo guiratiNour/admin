@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+    <div id="loader">
+	</div>
+   
+    <div id="main-wrapper">
+       
+        <div class="nav-header">
+            <a href="index.html" class="brand-logo">
+				<img src="images/logo/logo.png" class="logo-abbr" alt="">
+				<img src="images/logo/logo-text.png" class="brand-title" alt="">
+				<img src="images/logo/logo-color.png" class="logo-color" alt="">
+				<img src="images/logo/logo-text-color.png" class="brand-title color-title" alt="">
+            </a>
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+					<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="22" y="11" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect x="11" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect x="22" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect x="11" y="11" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect x="11" y="22" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect y="11" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect x="22" y="22" width="4" height="4" rx="2" fill="#2A353A"/>
+						<rect y="22" width="4" height="4" rx="2" fill="#2A353A"/>
+					</svg>		
+                </div>
+            </div>
+        </div>
+     
+	
+        <app-header></app-header>
+
+       <app-menu></app-menu>
+        <div class="content-body">
+            <!-- row -->
+			<div class="container-fluid">
+				<!-- row -->
+				<div class="row">
+					<div class="col-xl-3 col-lg-4">
+						<div class="clearfix">
+							<div class="card card-bx profile-card author-profile m-b30">
+								<div class="card-body">
+									<div class="p-5">
+										<div class="author-profile">
+											<div class="author-media">
+												<img src="assets/images/profile/photo.png" alt="">
+												<div class="upload-link" title="" data-toggle="tooltip" data-placement="right" data-original-title="update">
+													<input type="file" class="update-flie">
+													<i class="fa fa-camera"></i>
+												</div>
+											</div>
+											<div class="author-info">
+												<h6 class="title">{{ userDetails.nom}}-{{ userDetails.prenom}}</h6>
+												<span>Administrateur</span>
+											</div>
+										</div>
+									</div>
+								
+								</div>
+							
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-9 col-lg-8">
+						<div class="card profile-card card-bx m-b30">
+							<div class="card-header">
+								<h6 class="title">Profile</h6>
+							</div>
+							<form class="profile-form">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-sm-6 m-b30">
+											<label class="form-label">Nom</label>
+											<input type="text" class="form-control" placeholder=" {{userDetails.nom}}" readonly="readonly" >
+										</div>
+										<div class="col-sm-6 m-b30">
+											<label class="form-label">Prénom</label>
+											<input type="text" class="form-control" placeholder=" {{userDetails.prenom}}" readonly="readonly">
+										</div>
+										<div class="col-sm-6 m-b30">
+											<label class="form-label">Email</label>
+											<input type="email" class="form-control" placeholder="{{userDetails.email}}" readonly="readonly">
+										</div>
+										<div class="col-sm-6 m-b30">
+											<label class="form-label">mot de passe</label>
+											<input type="password" class="form-control" placeholder="{{userDetails.mdp}}" readonly="readonly" [(ngModel)]="userDetails.mdp" name="mdp">
+										</div>
+										
+										<div class="col-sm-6 m-b30">
+											<label class="form-label">Titre</label>
+											<input type="text" class="form-control" placeholder="Administrateur" readonly="readonly">
+										</div>
+										
+										
+									
+									</div>
+								</div>
+							
+							</form>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+      <app-footer></app-footer>
+      
+	</div>
+    
+</body>
+
+</html>

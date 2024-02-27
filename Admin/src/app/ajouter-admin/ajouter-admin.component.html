@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+   <div id="loader">
+	</div>
+   
+    <div id="main-wrapper">
+	<app-header></app-header>
+      
+      <app-menu></app-menu>
+       
+        <div class="content-body">
+            <div class="container-fluid">
+	
+                <div class="row">
+					
+					<div class="col-xl-12 col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Add Admin</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form [formGroup]="addadminForm" (ngSubmit)="addNewAdmin()">
+                                        <div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Name</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Name" formControlName="nom" name="nom">
+												<div *ngIf="this.nom?.touched && this.nom?.invalid">
+													<small class="text-danger" *ngIf="this.nom?.errors?.['required']">your name
+														is required</small>
+												  </div>
+                                            </div>
+                                        </div>
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Surname</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" placeholder="Surname" formControlName="prenom" name="prenom">
+												<div *ngIf="this.prenom?.touched && this.prenom?.invalid">
+													<small class="text-danger" *ngIf="this.prenom?.errors?.['required']">your surname
+														is required</small>
+												  </div>
+                                            </div>
+											
+                                        </div>
+										
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Email</label>
+                                            <div class="col-sm-9">
+                                                <input type="email" class="form-control" placeholder="Email" formControlName="email" name="email">
+												<div *ngIf="this.email?.touched && this.email?.invalid">
+													<small class="text-danger" *ngIf="this.email?.errors?.['required']">your email
+														is required</small>
+														<small class="text-danger" *ngIf="this.email?.errors?.['email']">please enter a valid email format 
+														</small>
+												  </div>
+                                            </div>
+                                        </div>
+										
+										<div class="mb-3 row">
+                                            <label class="col-sm-3 col-form-label">Password</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" class="form-control" placeholder="Password" formControlName="mdp" name="mdp">
+												<div *ngIf="this.mdp?.touched && this.mdp?.invalid">
+													<small class="text-danger" *ngIf="this.mdp?.errors?.['required']">your password
+														is required</small>
+														
+												  </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mb-3 row">
+                                            <div class="col-sm-10">
+                                                <button type="submit" class="btn btn-primary">Add</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+					</div>
+	
+                </div>
+            </div>
+        </div>
+  <app-footer></app-footer>
+    </div>
+ 
+</body>
+
+</html>
